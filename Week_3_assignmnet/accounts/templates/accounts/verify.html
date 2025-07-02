@@ -1,0 +1,23 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Account Verification{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-header text-center">
+                    <h2>Account Verification Status</h2>
+                </div>
+                <div class="card-body">
+                    {# Messages are displayed by the base.html template, so the specific status will be there #}
+                    <p class="lead text-center">Check the message at the top of the page for your verification status.</p>
+                    <div class="d-grid gap-2">
+                        <a href="{% url 'user_login' %}" class="btn btn-success mt-3">Go to Login</a>
+                        <a href="{% url 'register' %}" class="btn btn-secondary mt-2">Register Another Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
